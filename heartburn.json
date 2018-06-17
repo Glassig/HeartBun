@@ -1,4 +1,4 @@
-{
+var heartburnJSON = {
 	"questions": [
 		{	
 			"id": "is_heartburn_known",
