@@ -1,0 +1,25 @@
+env:
+  browser: true
+  jquery: true
+  es6: true
+  node: true
+  commonjs: true
+extends: 
+  - eslint:recommended
+  - standard
+rules:
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+      VariableDeclarator: { var: 2, let: 2, const: 3 }
+  space-before-function-paren:
+    - error
+    - never
+  quotes:
+    - error
+    - double
+    - avoidEscape: true
+      allowTemplateLiterals: false
+globals:
+  heartburnJSON: true
