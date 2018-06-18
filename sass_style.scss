@@ -57,6 +57,7 @@ body {
 		transform: rotate(180deg);
 		font-size: 150%;
 		position: absolute;
+		text-decoration: none;
 	}
 }
 
@@ -179,6 +180,16 @@ body {
 
 #outcome_ruler {
 	bottom: 63%;
+}
+
+a {
+	color: $primary-color;
+	&.back_to_start {
+		width: 100%;
+		bottom: 45px;
+		position: absolute;
+		text-align: center;
+	}
 }
 
 

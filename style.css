@@ -44,7 +44,8 @@ body {
     left: 10px;
     transform: rotate(180deg);
     font-size: 150%;
-    position: absolute; }
+    position: absolute;
+    text-decoration: none; }
 
 #question_container {
   height: 50%;
@@ -143,5 +144,13 @@ body {
 
 #outcome_ruler {
   bottom: 63%; }
+
+a {
+  color: #6accba; }
+  a.back_to_start {
+    width: 100%;
+    bottom: 45px;
+    position: absolute;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

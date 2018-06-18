@@ -19,3 +19,4 @@ function getOutcome(score) {
 }
 
 getOutcome(window.localStorage.getItem("userScore"))
+
