@@ -59,6 +59,19 @@ body {
 		position: absolute;
 		text-decoration: none;
 	}
+
+	#progress {
+		height: 2px;
+		background-color: $primary-color;
+		width: 0%;
+		position: absolute;
+		top:100%;
+		transition:200ms linear;
+
+		&.outcome {
+			width: 100%;
+		}
+	}
 }
 
 #question_container {

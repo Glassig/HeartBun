@@ -1,6 +1,7 @@
 var localStorage = window.localStorage
 localStorage.setItem("userScore", 0)
-localStorage.setItem("questionId", heartburnJSON.questions[4].id)
+localStorage.setItem("questionId", heartburnJSON.questions[0].id)
+localStorage.setItem("questionNumber", 0)
 
 generateQuestionText(localStorage.getItem("questionId"))
 generateAnswerButtons(localStorage.getItem("questionId"))
@@ -46,8 +47,13 @@ function selectButton() {
 function generateNextPageContent(currentQuestionId, answer) {
   var newScore = Number(localStorage.getItem("userScore")) + Number(answer.value)
   var next = getNextStepId(currentQuestionId, answer.id, newScore)
+  var questionNumber = Number(localStorage.getItem("questionNumber")) + 1
+
+  document.getElementById("progress").style.width = (questionNumber * 10) + "%"
   localStorage.setItem("userScore", newScore)
   localStorage.setItem("questionId", next.id)
+  localStorage.setItem("questionNumber", questionNumber)
+
   if (next.type === "question") {
     generateQuestionText(next.id)
     generateAnswerButtons(next.id)

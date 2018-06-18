@@ -46,6 +46,15 @@ body {
     font-size: 150%;
     position: absolute;
     text-decoration: none; }
+  .topbar #progress {
+    height: 2px;
+    background-color: #6accba;
+    width: 0%;
+    position: absolute;
+    top: 100%;
+    transition: 200ms linear; }
+    .topbar #progress.outcome {
+      width: 100%; }
 
 #question_container {
   height: 50%;
