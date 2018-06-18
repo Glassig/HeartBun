@@ -16,7 +16,9 @@ function getOutcome(score) {
   var id = getOutcomeId(score)
   var outcome = heartburnJSON.outcomes.filter(outcome => outcome.id === id)[0]
   document.getElementById("outcome_text").innerHTML = outcome.text
+  if (outcome.show_booking_button) {
+    document.getElementById("book_a_meeting").style.display = "block"
+  }
 }
 
 getOutcome(window.localStorage.getItem("userScore"))
-
