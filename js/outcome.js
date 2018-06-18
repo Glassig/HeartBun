@@ -12,7 +12,7 @@ function getQuestionElementFromId(idLabel) {
   return heartburnJSON.questions.filter(question => question.id === idLabel)[0]
 }
 
-function getOutcome(score) {
+function showOutcome(score) {
   var id = getOutcomeId(score)
   var outcome = heartburnJSON.outcomes.filter(outcome => outcome.id === id)[0]
   document.getElementById("outcome_text").innerHTML = outcome.text
@@ -21,4 +21,4 @@ function getOutcome(score) {
   }
 }
 
-getOutcome(window.localStorage.getItem("userScore"))
+showOutcome(window.localStorage.getItem("userScore"))
