@@ -5,9 +5,15 @@ localStorage.setItem("questionNumber", 0)
 
 generateQuestionText(localStorage.getItem("questionId"))
 generateAnswerButtons(localStorage.getItem("questionId"))
+
 document.getElementById("next").addEventListener("click", function() {
-  generateNextPageContent(localStorage.getItem("questionId"),
-    document.querySelectorAll("#answers button.active")[0])
+  var selectedAnswer = document.querySelectorAll("#answers button.active")[0]
+
+  if (selectedAnswer) {
+    generateNextPageContent(localStorage.getItem("questionId"), selectedAnswer)
+  } else {
+    alert("Please select one answer")
+  }
 })
 
 function generateQuestionText(idLabel) {
