@@ -1,0 +1,16 @@
+{
+	"name": "HeartBun",
+	"short_name": "Bun",
+	"start_url": ".",
+	"background_color": "#6accba",
+	"description": "Employement test for Kry",
+	"display": "fullscreen",
+	"icons": [{
+		"src": "favicon.ico",
+		"type": "image/x-icon",
+		"sizes": "16x16"
+	}],
+	"dir": "ltr",
+	"lang": "en",
+	"theme_color": "#6accba"
+}
